@@ -26,11 +26,16 @@ body {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     max-width: 600px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: auto; /* Allow scroll if content overflows */
+    height: 90vh; /* Limit the height */
 }
 
 /* Heading style */
 h1 {
-    font-size: 3rem;
+    font-size: 2.2rem; /* Smaller heading */
     margin-bottom: 20px;
     font-weight: bold;
     color: #ffed00; /* Bright yellow color */
@@ -38,38 +43,42 @@ h1 {
 
 /* Instruction text style */
 p {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Smaller text size */
     margin-bottom: 20px;
     font-style: italic;
+    color: #fff;
 }
 
 /* Text container for typing test */
-#text-container {
+#text-to-type {
     margin-bottom: 20px;
-    padding: 20px;
-    font-size: 1.5rem;
+    padding: 15px;
+    font-size: 1.2rem; /* Smaller text size */
     line-height: 1.6;
     word-wrap: break-word;
     border-radius: 8px;
     background: #222;
     color: #ddd;
     min-height: 100px;
+    width: 100%;
     text-align: left;
     font-family: 'Courier New', Courier, monospace;
+    white-space: pre-wrap; /* Allow text to wrap */
 }
 
 /* Input box style */
 #input-text {
     width: 100%;
-    padding: 20px;  /* Increased padding */
-    font-size: 1.2rem;
+    padding: 15px; /* Reduced padding */
+    font-size: 1rem; /* Slightly smaller font */
     border: 2px solid #ddd;
     border-radius: 8px;
     margin-bottom: 20px;
     background-color: #333;
     color: white;
     outline: none;
-    min-height: 150px; /* Increased height */
+    min-height: 120px; /* Smaller height */
+    resize: vertical; /* Allow vertical resizing */
 }
 
 #input-text:focus {
@@ -78,19 +87,20 @@ p {
 }
 
 /* Speed and accuracy display */
-#results {
-    font-size: 1.2rem;
+#typing-speed, #accuracy {
+    font-size: 1.1rem;
     color: #00ff00; /* Green color for positive feedback */
     font-weight: bold;
     margin-top: 10px;
+    color: #ffed00;
 }
 
 /* Button for changing text */
 button {
     background-color: #ffed00;
     border: none;
-    padding: 15px 30px;
-    font-size: 1.2rem;
+    padding: 12px 25px;
+    font-size: 1.1rem;
     color: #222;
     font-weight: bold;
     border-radius: 10px;
@@ -110,16 +120,16 @@ button:focus {
 /* Responsive design: small screen adjustments */
 @media (max-width: 768px) {
     h1 {
-        font-size: 2rem;
+        font-size: 1.8rem;
     }
 
     #input-text {
-        font-size: 1rem;
+        font-size: 0.9rem;
         padding: 10px;
     }
 
     button {
         font-size: 1rem;
-        padding: 12px 25px;
+        padding: 10px 20px;
     }
 }
