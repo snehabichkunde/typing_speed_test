@@ -1,0 +1,37 @@
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+.pytest_cache/
+
+# Django
+*.log
+*.pot
+*.py[cod]
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# Virtual Environment
+myenv/
+env/
+venv/
+
+# macOS
+.DS_Store
+
+# IDEs and editors
+.idea/
+.vscode/
+
+# Environment files
+.env
+*.env
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Logs
+*.log
